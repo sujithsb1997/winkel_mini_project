@@ -1,7 +1,9 @@
 
-
+<% if(isLoggedin) { %>
+    <%- include('../partials/userLoggedinHeader') %>
+    <% }else { %>
     <%- include('../partials/userHeader') %>
-    
+    <% } %>
 
 <section class="banner-area organic-breadcrumb">
     <div class="container">
@@ -361,9 +363,7 @@
                             
                         </ul>
 
-                        <% if(id){ %>
-                         ₹ <%= cartProducts.totalPrice %>
-                         <% } %>
+                        
                         
                         <div class="payment_item">
                             <div class="radion_btn">
@@ -372,9 +372,7 @@
                                 <div class="check"></div>
                             </div>
 
-                            <% if(id){ %>
-                                ₹ <%= couponTotal %>
-                                <% } %>
+                            
 
                             <p>Please send a check to Store Name, Store Street, Store Town, Store State / County,
                                 Store Postcode.</p>
